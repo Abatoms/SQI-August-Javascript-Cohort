@@ -162,3 +162,30 @@ console.log(isAgeLessThanLegalAge);
 // Exponential assignment
 // Greater than or equals to
 // Less than or equals to
+
+// Logical Operatirs
+// Logical and
+// Logical or
+// Logical not
+
+// Or
+// true || false => true
+// false || true => true
+// true || true => true
+// false || false => false
+const isAllowedToMarry = false;
+const isAllowedToVote = true;
+
+console.log("OR", isAllowedToMarry || isAllowedToVote);
+
+// And
+// true && false => false
+// false && true => false
+// false and false => false
+// true and true => true
+console.log("AND", isAllowedToMarry && isAllowedToVote);
+
+// Mot
+// Return the inverse of the boolean value
+
+console.log(!isAllowedToMarry);
