@@ -81,3 +81,23 @@ if (jambScore > 200) {
 
 // A student is allowed to registerd for hostel if they have completed their admission regsistration. If they haven't they should be asked to go complete their admission registration.
 // After the student has registered for hostel, we then check if they have paid for the hostel. If they haven't they should be asked to go pay for the hostel. If they have, we tell send them a congratulatory message
+
+// Switch Statements
+
+let airtime = "GLO";
+switch (airtime) {
+  case "MTN":
+    console.log("The airtime you want is MTN");
+    break;
+  case "AIRTEL":
+    console.log("The airtime you want is Airtel");
+    break;
+  case "Etisalat":
+    console.log("The airtime you want is Etisalat");
+    break;
+  case "GLO":
+    console.log("The airtime you want is GLO");
+    break;
+  default:
+    console.log("Omo, shey na multilinks you dey use ni????");
+}
