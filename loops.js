@@ -101,3 +101,47 @@ for (let i = 0; i <= 1000; i++) {
       For every number that is a multiple of both 3 and 5 display "FizzBuzz" instead of the number
 
 */
+
+// Solution to the FizzBuzz assignment
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+    continue;
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+    continue;
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+    continue;
+  }
+  console.log(i);
+}
+
+let userContainer = document.getElementById("userContainer");
+for (let i = 1; i <= 10; i++) {
+  userContainer.innerHTML += `<div id="user_${i}">
+        <h4>Name: User ${i}</h4>
+        <p>Email: user${i}@gmail.com</p>
+      </div>`;
+}
+
+const userTwo = document.getElementById("user_2");
+// console.log(userTwo);
+userTwo.style.backgroundColor = "red";
+userTwo.style.color = "#FFF";
+
+// Two dimensional loops
+// for (let i = 0; i <= 10; i++) {
+//   console.log("The value of i is " + i);
+//   for (let j = 0; j <= 10; j++) {
+//     console.log("Hmm, the value of j is " + j);
+//   }
+// }
+
+// Build a multiplication table using nested for loop
+for (let m = 2; m < 13; m++) {
+  console.log(`Table ${m}`);
+  for (let n = 1; n < 13; n++) {
+    console.log(`${m} * ${n} = ${m * n}`);
+  }
+}
