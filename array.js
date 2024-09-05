@@ -43,3 +43,60 @@ for (let i = 0; i < cars.length; i++) {
         <li>${cars[i]}</li>
   `;
 }
+
+console.log("?>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+let persons = [
+  "Bolarinwa",
+  "Tolulope",
+  "Ayomide",
+  "Olufunsho",
+  "Ayangbade",
+  "Agbabiaka",
+];
+
+const personsContainer = document.getElementById("persons");
+for (let i = 0; i < persons.length; i++) {
+  console.log(persons[i]);
+  personsContainer.innerHTML += `<li>${persons[i]}</li>`;
+  for (let j = 0; j < cars.length; j++) {
+    console.log(cars[j]);
+    personsContainer.innerHTML += `<ul><li>${cars[j]}</li></ul> `;
+  }
+}
+
+// Multidimensional arrays
+
+const numberStuffs = [
+  [1, 2, 3, 4, 5],
+  [2, 4, 6, 8, 10],
+  [1, 3, 5, 7, 9],
+  [2, 3, 5, 7, 11],
+];
+
+console.log(numberStuffs);
+// console.log(numberStuffs[2][4]);
+
+for (let i = 0; i < numberStuffs.length; i++) {
+  console.log(numberStuffs[i]);
+  for (let j = 0; j < numberStuffs[i].length; j++) {
+    console.log(numberStuffs[i][j]);
+  }
+}
+
+const pets = ["Dog", "Cats", "Rabbits", "Lion", "Tiger"];
+
+for (let pet of pets) {
+  console.log(pet);
+}
+
+function sayNames(names, ages) {
+  for (name of names) {
+    console.log(name);
+  }
+  for (age of ages) {
+    console.log(age);
+  }
+}
+
+sayNames(["Bola", "Toke", "Jide", "Sayo"], [1, 2, 3, 4]);

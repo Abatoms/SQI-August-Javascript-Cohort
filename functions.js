@@ -117,3 +117,14 @@ function checkThis() {
 }
 
 checkThis();
+
+function printNumbers(a, b, ...others) {
+  console.log("a", a);
+  console.log("b", b);
+  console.log("others", others);
+  for (numb of others) {
+    console.log("yayy", numb);
+  }
+}
+
+printNumbers(1, 2, 3, 4, 5, 6, 47, 67, 56, 79);
