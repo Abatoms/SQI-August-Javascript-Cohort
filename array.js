@@ -89,14 +89,3 @@ const pets = ["Dog", "Cats", "Rabbits", "Lion", "Tiger"];
 for (let pet of pets) {
   console.log(pet);
 }
-
-function sayNames(names, ages) {
-  for (name of names) {
-    console.log(name);
-  }
-  for (age of ages) {
-    console.log(age);
-  }
-}
-
-sayNames(["Bola", "Toke", "Jide", "Sayo"], [1, 2, 3, 4]);
