@@ -121,3 +121,73 @@ for (person of persons) {
   console.log("No be you", person);
   continue;
 }
+
+// Array Sort Methods
+// Array sort()
+// Array reverse()
+
+// Sorting an array
+const fruits = [
+  "Banana",
+  "Orange",
+  "Apple",
+  "Mango",
+  "Pineapple",
+  "Grapes",
+  "PawPaw",
+];
+const sortedFruits = fruits.sort();
+console.log(sortedFruits);
+
+// Sorting an array of numbers
+const numbers = [100, 90, 95, 80, 2, 35, 70, 200];
+const sortedNumbers = numbers.sort((a, b) => a - b);
+console.log(sortedNumbers);
+
+// Reversing an array
+const reversedNumbers = numbers.reverse();
+console.log(reversedNumbers);
+
+// Array iteration methods
+
+// For each method
+const studentContainer = document.getElementById("students");
+const students = [
+  "Bola",
+  "Tolu",
+  "Jide",
+  "Folake",
+  "Dara",
+  "Bolu",
+  "Tinuke",
+  "Badmus",
+];
+students.forEach((student) => {
+  console.log("I am a student", student);
+  studentContainer.innerHTML += `<p>${student}</p>`;
+});
+
+// Map method
+students.map((student) => {
+  console.log("I am a student in map", student);
+});
+
+// Filter method
+const studentsWithNameStartingWithB = students.filter((student) =>
+  student.toLowerCase().startsWith("b")
+);
+console.log(studentsWithNameStartingWithB);
+
+// Every method
+const everybodyHasNameStartingWithB = students.every((student) =>
+  student.startsWith("B")
+); //false
+
+console.log(everybodyHasNameStartingWithB);
+
+// Some method
+const someoneHasNameStartingWithB = students.some((student) =>
+  student.startsWith("B")
+); // true
+
+console.log(someoneHasNameStartingWithB);
