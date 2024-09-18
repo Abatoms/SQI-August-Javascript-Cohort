@@ -151,3 +151,85 @@ console.log(">>>>>>>>>>>>>>>>>>>>>>");
 console.log(objOne);
 console.log(objThree);
 console.log(objTwo);
+
+// Array of Objects
+const users = [
+  {
+    name: "Bolarinwa Ahmed",
+    age: 16,
+    height: "6ft3",
+    hobbies: ["Coding", "Reading", "Watching Series"],
+  },
+  {
+    name: "Jide Kosoko",
+    age: 70,
+    height: "5ft7",
+    hobbies: ["Shina", "Baller"],
+  },
+  {
+    name: "Taiwo Hassan Ogogo",
+    age: 60,
+    height: "6ft2",
+    hobbies: ["Boxing", "Thuggery"],
+  },
+];
+
+console.log(users);
+console.log(users[1]);
+console.log(users[0].hobbies);
+
+const userContainer = document.getElementById("users");
+for (let user of users) {
+  userContainer.innerHTML += `
+    <div>
+      <h1>${user.name}</h1>
+      <p>Age: ${user.age}</p>
+      <p>Height: <i>${user.height}</i></p>
+      <p>Hobbies: ${user.hobbies}</p>
+    </div>
+  `;
+}
+
+const products = [
+  {
+    name: " iPhone 11",
+    price: 300000,
+    image: "",
+  },
+  {
+    name: " iPhone 12",
+    price: 400000,
+    image: "",
+  },
+  {
+    name: " iPhone 13",
+    price: 500000,
+    image: "",
+  },
+  {
+    name: " iPhone 14",
+    price: 600000,
+    image: "",
+  },
+  {
+    name: " iPhone 15",
+    price: 700000,
+    image: "",
+  },
+  {
+    name: " iPhone 16",
+    price: 800000,
+    image: "",
+  },
+];
+const productContainer = document.getElementById("products");
+for (let product of products) {
+  productContainer.innerHTML += `
+     <div class="product">
+        <h2>${product.name}</h2>
+        <p>${product.price}</p>
+        <button>Add to cart</button>
+        <button class="delete__btn">Delete Product</button>
+      </div>
+  `;
+}

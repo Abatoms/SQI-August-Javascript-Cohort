@@ -4,6 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to JavaScript</title>
+
+    <style>
+      #products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
+      }
+
+      .product {
+        background-color: #2fb67e;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        flex-basis: 22%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .product h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .product p {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .product button {
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .product button:hover {
+        background-color: #04741c;
+      }
+
+      .product .delete__btn {
+        background-color: red;
+      }
+    </style>
   </head>
   <body>
     <h1>Welcome to JAVASCRIPT</h1>
@@ -23,6 +71,10 @@
     </div>
 
     <div id="students"></div>
+
+    <div id="users"></div>
+
+    <div id="products"></div>
     <!-- <script src="./script.js"></script> -->
     <!-- <script src="./opeartors.js"></script> -->
     <!-- <script src="./conditionals.js"></script> -->
