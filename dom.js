@@ -85,3 +85,12 @@ document.getElementById("submitBtn").addEventListener("click", () => {
   email.value = "";
   password.value = "";
 });
+
+
+/* Create 2 inputs of type number.
+Now have 4 buttons that do each of the followinf:
+1. Add the 2 numbers
+2. Subtract the second number from the first number
+3. Divide the 2 numbers 
+4. Multiply the 2 numbers
+*/

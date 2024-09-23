@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQI STUDENT MANAGEMENT SYSTEM</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e9ecef;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      form {
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: auto;
+        width: 80%;
+      }
+
+      .formRow {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .formGroup {
+        /* flex-basis: calc(50% - 20px); */
+        margin-right: 20px;
+      }
+
+      .formGroup:nth-child(odd) {
+        margin-right: 0;
+      }
+
+      label {
+        margin-bottom: 10px;
+        color: #555;
+        font-weight: bold;
+      }
+
+      input {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        font-size: 16px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      table {
+        width: 80%;
+        margin: 30px auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      @media (max-width: 600px) {
+        .formRow {
+          flex-direction: column;
+        }
+
+        .formGroup {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to my Student Management System</h1>
+
+    <form action="">
+      <div class="formRow">
+        <div class="formGroup">
+          <label for="studentName">Student Name</label>
+          <input type="text" name="studentName" id="studentName" />
+        </div>
+        <div class="formGroup">
+          <label for="studentEmail">Student Email</label>
+          <input type="text" name="studentEmail" id="studentEmail" />
+        </div>
+      </div>
+      <div class="formRow">
+        <div class="formGroup">
+          <label for="studentAge">Student Age</label>
+          <input type="number" name="studentAge" id="studentAge" />
+        </div>
+        <div class="formGroup">
+          <label for="studentGrade">Student Grade</label>
+          <input type="number" name="studentGrade" id="studentGrade" />
+        </div>
+      </div>
+      <div class="formGroup">
+        <button type="button" id="submitBtn">Add Student</button>
+      </div>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Student Email</th>
+          <th>Student Age</th>
+          <th>Student Grade</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="./studentManagement.js"></script>
+  </body>
+</html>
