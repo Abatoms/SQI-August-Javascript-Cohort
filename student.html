@@ -72,10 +72,27 @@
       button:hover {
         background-color: #0056b3;
       }
-
-      table {
+      .searchContainer {
         width: 80%;
         margin: 30px auto;
+
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+      }
+
+      .searchContainer input {
+        width: 400px;
+        padding: 12px 14px;
+        border-radius: 6px;
+      }
+
+      .searchContainer input:focus {
+        outline: none;
+      }
+      table {
+        width: 80%;
+        margin: 10px auto;
         border-collapse: collapse;
         background-color: #fff;
         border-radius: 8px;
@@ -97,6 +114,14 @@
 
       tr:hover {
         background-color: #f1f1f1;
+      }
+
+      td button {
+        background-color: rgb(131, 29, 29);
+      }
+
+      td button:hover {
+        background-color: rgb(172, 12, 12);
       }
 
       @media (max-width: 600px) {
@@ -139,7 +164,14 @@
         <button type="button" id="submitBtn">Add Student</button>
       </div>
     </form>
-
+    <div class="searchContainer">
+      <input
+        type="search"
+        name="searchStudent"
+        id="searchStudent"
+        placeholder="Enter student name or email"
+      />
+    </div>
     <table>
       <thead>
         <tr>
@@ -147,6 +179,7 @@
           <th>Student Email</th>
           <th>Student Age</th>
           <th>Student Grade</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody></tbody>
