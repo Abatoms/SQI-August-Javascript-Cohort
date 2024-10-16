@@ -4,14 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OOP - Object Oriented Programming</title>
+    <style>
+      #user {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        max-width: 500px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      #user img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .male img {
+        border: 2px solid #007bff;
+      }
+
+      .female img {
+        border: 2px solid #f50057;
+      }
+
+      #user h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      #user p {
+        margin: 5px 0;
+        font-size: 1em;
+        color: #666;
+      }
+
+      .male p strong {
+        color: #007bff;
+      }
+
+      .female p strong {
+        color: #f50057;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome to OOP -Object Oriented Programming</h1>
+    <h1>Welcoe to OOP -Object Oriented Programming</h1>
     <p id="result"></p>
     <p id="resultBold"></p>
     <p id="resultItalic"></p>
+    <p id="demo"></p>
+    <div id="user"></div>
+    <button id="generate">Generate new user</button>
+
     <!-- <script src="./classes.js"></script> -->
     <!-- <script src="./callback.js"></script> -->
-    <script src="./async.js"></script>
+    <!-- <script src="./async.js"></script> -->
+    <script src="./randomuser.js"></script>
   </body>
 </html>
