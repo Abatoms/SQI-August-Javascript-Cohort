@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OOP - Object Oriented Programming</title>
     <style>
-      #user {
+      #user,
+      .user {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -17,7 +18,10 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
-      #user img {
+      .user {
+        margin-top: 20px;
+      }
+      img {
         width: 120px;
         height: 120px;
         border-radius: 50%;
@@ -32,13 +36,13 @@
         border: 2px solid #f50057;
       }
 
-      #user h1 {
+      h1 {
         font-size: 1.8em;
         margin-bottom: 10px;
         color: #333;
       }
 
-      #user p {
+      p {
         margin: 5px 0;
         font-size: 1em;
         color: #666;
@@ -62,6 +66,14 @@
         border-radius: 5px;
         cursor: pointer;
       }
+
+      #users {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
     </style>
   </head>
   <body>
@@ -72,6 +84,11 @@
     <p id="demo"></p>
     <div id="user"></div>
     <button id="generate">Generate new user</button>
+
+    <br />
+    <br />
+    <h2>Users Data</h2>
+    <div id="users"></div>
 
     <!-- <script src="./classes.js"></script> -->
     <!-- <script src="./callback.js"></script> -->
