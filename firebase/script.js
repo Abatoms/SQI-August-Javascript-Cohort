@@ -13,6 +13,9 @@ const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore(app);
 // console.log(db);
 
+const auth = firebase.auth(app);
+// console.log(auth);
+
 const studentColRef = db.collection("students");
 const staffColRef = db.collection("staffs");
 let loading;
@@ -28,6 +31,7 @@ const admission_year = document.getElementById("admission_year");
 
 const getAllStudents = async () => {
   let studentArray = [];
+  const snapshot = await studentColRef.get();
   console.log(snapshot);
   try {
     loading = true;
@@ -36,7 +40,8 @@ const getAllStudents = async () => {
       studentArray.push({ ...doc.data(), id: doc.id });
       // console.log(doc.id);
       // console.log(doc.data());
-      studentDiv.innerHTML += `
+      studentDiv
+        ? (studentDiv.innerHTML += `
         <div class="student">
             <h1>${doc.data().firstname} ${doc.data().lastname}</h1>
             <p><strong>Age:</strong> ${doc.data().age}</p>
@@ -46,7 +51,8 @@ const getAllStudents = async () => {
              }</p>
             <button class="deleteBtn_${doc.id}">Delete</button>
         </div>
-    `;
+    `)
+        : "";
     });
     return studentArray;
   } catch (error) {
@@ -102,18 +108,20 @@ const deleteStudent = async (id) => {
   }
 };
 
-students.forEach((student) => {
-  // console.log(student);
-  const deleteBtn = document.querySelector(`.deleteBtn_${student.id}`);
-  deleteBtn.addEventListener("click", () => {
-    console.log("heyyy");
-    deleteStudent(student.id);
-  });
-});
+// students
+//   ? students.forEach((student) => {
+//       // console.log(student);
+//       const deleteBtn = document.querySelector(`.deleteBtn_${student.id}`);
+//       deleteBtn.addEventListener("click", () => {
+//         console.log("heyyy");
+//         deleteStudent(student.id);
+//       });
+//     })
+//   : "";
 
-if (studentForm) {
-  studentForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    addNewStudent();
-  });
-}
+// if (studentForm) {
+//   studentForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     addNewStudent();
+//   });
+// }
