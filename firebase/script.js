@@ -10,10 +10,10 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 // console.log(app);
-const db = firebase.firestore(app);
+export const db = firebase.firestore(app);
 // console.log(db);
 
-const auth = firebase.auth(app);
+export const auth = firebase.auth(app);
 // console.log(auth);
 
 const studentColRef = db.collection("students");
@@ -23,8 +23,7 @@ let loading;
 // Get all students from the database
 const studentDiv = document.getElementById("students");
 const studentForm = document.getElementById("studentForm");
-const firstname = document.getElementById("firstname");
-const lastname = document.getElementById("lastname");
+
 const age = document.getElementById("age");
 const level = document.getElementById("level");
 const admission_year = document.getElementById("admission_year");
@@ -32,7 +31,7 @@ const admission_year = document.getElementById("admission_year");
 const getAllStudents = async () => {
   let studentArray = [];
   const snapshot = await studentColRef.get();
-  console.log(snapshot);
+  // console.log(snapshot);
   try {
     loading = true;
     //   console.log(snapshot);
@@ -67,16 +66,10 @@ const getAllStudents = async () => {
 
 const students = await getAllStudents();
 // console.log(students);
-
-const addNewStudent = async () => {
+var myName = "Bolarinwa";
+export const addNewStudent = async (data) => {
+  console.log(myName);
   try {
-    const data = {
-      firstname: firstname.value,
-      lastname: lastname.value,
-      age: age.value,
-      level: level.value,
-      admission_year: new Date(admission_year.value),
-    };
     console.log(data);
     const result = await studentColRef.add(data);
     console.log("Student added successfully? ", result);
@@ -119,9 +112,16 @@ const deleteStudent = async (id) => {
 //     })
 //   : "";
 
-// if (studentForm) {
-//   studentForm.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     addNewStudent();
-//   });
-// }
+if (studentForm) {
+  studentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = {
+      firstname: firstname.value,
+      lastname: lastname.value,
+      age: age.value,
+      level: level.value,
+      admission_year: new Date(admission_year.value),
+    };
+    addNewStudent(data);
+  });
+}
